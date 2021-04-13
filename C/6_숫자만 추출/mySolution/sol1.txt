@@ -1,0 +1,41 @@
+- 문법을 잘 몰라서 하다 말았음.
+- 문제 풀이 순서
+1. string을 입력받음
+2. 입력받은 것 중 숫자만 배열에 순서대로 넣음
+3. 해당 배열을 통해 자연수 n을 얻음 (*이때 getDeci 함수를 이용)
+4. 자연수 n의 약수 개수를 구함
+5. n과 n약수의 개수를 출력
+
+#include <stdio.h>
+
+int getDeci(int N){
+	int i=1;
+	for(i; i<N; i++){
+		i*=10;
+	}
+	return i;
+}
+
+int main() {
+		int intNum, i, k=0;
+		char inputText[50];
+		scanf("%s", &inputText);
+		for(i=0; i<sizeof(inputText)/sizeof(char); i++){
+			if(inputText[i]>=48 && inputText[i]<=57){
+				intNum++;
+			}
+		}
+		
+		char numArr[intNum];
+				for(i=0; i<sizeof(inputText)/sizeof(char); i++){
+			if(inputText[i]>=48 && inputText[i]<=57){
+				numArr[k];
+				k++;
+			}
+		}
+		
+		for(int j=0; j<k; j++){
+			printf("%d ", numArr[j]);	
+		}
+		
+	return 0;
